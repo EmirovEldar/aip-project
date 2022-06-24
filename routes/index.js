@@ -5,29 +5,47 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
-/* Страница blum */
+/* Страница Винни Пуха */
 router.get('/blum', function(req, res, next) {
-  res.send("<h1>Страница Блум</h1>")
+  res.render('hero', {
+      title: "Блум",
+      picture: "images/blum.png",
+      desc: "Такая родная"
+  });
 });
+
+
 /* Страница Винни Пуха */
 router.get('/stella', function(req, res, next) {
-  res.send("<h1>Страница Блум</h1>")
-});
-/* Страница Винни Пуха */
-router.get('/flora', function(req, res, next) {
-  res.send("<h1>Страница Флоры</h1>")
+  res.render('hero', {
+      title: "Стелла",
+      picture: "images/stella.png",
+      desc: "Такая секая"
+  });
 });
 /* Страница Винни Пуха */
 router.get('/muza', function(req, res, next) {
-  res.send("<h1>Страница Музы</h1>")
+  res.render('hero', {
+      title: "Муза",
+      picture: "images/muza.png",
+      desc: "Такая ок)"
+  });
 });
 /* Страница Винни Пуха */
 router.get('/leyla', function(req, res, next) {
-  res.send("<h1>Страница Лейлы</h1>")
+  res.render('hero', {
+      title: "Лейла",
+      picture: "images/leyla.png",
+      desc: "Такая родная"
+  });
 });
 /* Страница Винни Пуха */
-router.get('/tehna', function(req, res, next) {
-  res.send("<h1>Страница Техны</h1>")
+router.get('/Tehna', function(req, res, next) {
+  res.render('hero', {
+      title: "Техна",
+      picture: "images/tehna.png",
+      desc: "Такая родная"
+  });
 });
 
 
