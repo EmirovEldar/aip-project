@@ -47,6 +47,14 @@ router.get('/Tehna', function(req, res, next) {
       desc: "Такая родная"
   });
 });
+/* Страница Винни Пуха */
+router.get('/flora', function(req, res, next) {
+  res.render('hero', {
+      title: "Флора",
+      picture: "images/flora.png",
+      desc: "Такая родная"
+  });
+});
 
 
 module.exports = router;
