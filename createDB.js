@@ -1,22 +1,16 @@
 var mongoose = require('mongoose')
 mongoose.connect('mongodb://localhost/all')
-var Hero = require("./models/hero").Hero
 var async = require("async")
 var data = require('./data.js').data
-
-// 1. Очистить базу данных all
-// 2. Вставить 5 героев
-// 3. Закрыть соединение с базой данных
 
 async.series([
         open,
         dropDatabase,
-        createHeroes,
-        close
+        requireModels,
+        createHeroes
     ],
     function(err,result){
-        if(err) throw err
-        console.log("ok")
+        mongoose.disconnect()
     })
 
 function open(callback){
@@ -29,11 +23,6 @@ function dropDatabase(callback){
 }
 
 function createHeroes(callback){
-    data = [
-        {title: "Пятачок", nick: "pig"},
-        {title: "Иа Иа", nick: "pig"},
-        {title: "Винни Пух", nick: "pig"},
-    ]
     async.each(data, function(heroData, callback){
             var hero = new mongoose.models.Hero(heroData)
             hero.save(callback)
@@ -41,7 +30,12 @@ function createHeroes(callback){
         callback)
 }
 
+function requireModels(callback){
+    require("./models/hero").Hero
 
-function close(callback){
-    mongoose.disconnect(callback)
+    async.each(Object.keys(mongoose.models),function(modelName){
+        mongoose.models[modelName].ensureIndexes(callback)
+    },
+        callback
+    )
 }
