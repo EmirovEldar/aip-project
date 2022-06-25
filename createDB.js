@@ -29,12 +29,18 @@ function dropDatabase(callback){
 }
 
 function createHeroes(callback){
+    data = [
+        {title: "Пятачок", nick: "pig"},
+        {title: "Иа Иа", nick: "pig"},
+        {title: "Винни Пух", nick: "pig"},
+    ]
     async.each(data, function(heroData, callback){
             var hero = new mongoose.models.Hero(heroData)
             hero.save(callback)
         },
         callback)
 }
+
 
 function close(callback){
     mongoose.disconnect(callback)
