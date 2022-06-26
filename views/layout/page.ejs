@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Винкс</title>
+    <title>Winx</title>
     <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <link href="/bootstrap/dist/css/bootstrap.css"
@@ -12,22 +12,19 @@
     <body>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img src="images/winx.png" alt="winx" width="30" height="24" class="d-inline-block align-text-top">
-                    Винкс
+                <a class="navbar-brand" href="/">
+                    <img src="/images/logo.png" alt="logo" width="30" height="24" class="d-inline-block align-text-top">
+                    Winx
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ms-auto">
-                    <a class="nav-link" href="/blum">Блум</a>
-                    <a class="nav-link" href="/stella">Стелла</a>
-                    <a class="nav-link" href="/muza">Муза</a>
-                    <a class="nav-link" href="/leyla">Лейла</a>
-                    <a class="nav-link" href="/tehna">Техна</a>
-                    <a class="nav-link" href="/flora">Флора</a>
-                </div>
+                    <% menu.forEach(function(hero){ %>
+                        <a class="nav-link" href="/heroes/<%=hero.nick%>"><%=hero.title%></a>
+                    <% }) %>  
+                </div>                  
                 </div>
             </div>
         </nav>

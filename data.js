@@ -1,31 +1,37 @@
 var data = [{
-    title: 'Пятачок',
-    nick: 'pig',
-    avatar: '/images/pig.jpg',
+    title: 'Блум',
+    nick: 'blum',
+    avatar: '/images/blum.jpg',
     desc: 'Лучший друг Винни-Пуха, крошечный поросенок …'
 },
 {
-    title: 'Иа Иа',
-    nick: 'iaia',
-    avatar: '/images/iaia.jpg',
+    title: 'Стелла',
+    nick: 'stella',
+    avatar: '/images/stella.jpg',
     desc: 'Старый серый ослик …'
 },
 {
-    title: 'Винни Пух',
-    nick: 'vinni',
-    avatar: '/images/vinni.jpg',
+    title: 'Муза',
+    nick: 'muza',
+    avatar: '/images/muza.jpg',
     desc: 'Плюшевый медвежонок, игрушка … '
 },
 {
-    title: 'Сова',
-    nick: 'sova',
-    avatar: '/images/sova.jpg',
+    title: 'Лейла',
+    nick: 'leyla',
+    avatar: '/images/leyla.jpg',
     desc: 'Сова жила в великолепном замке …'
 },
 {
-    title: 'Кролик',
-    nick: 'rabbit',
-    avatar: '/images/rabbit.jpg',
+    title: 'Техна',
+    nick: 'tehna',
+    avatar: '/images/tehna.jpg',
+    desc: 'Кролик, всегда безумно рад видеть Винни-Пуха …'
+},
+{
+    title: 'Флора',
+    nick: 'flora',
+    avatar: '/images/flora.jpg',
     desc: 'Кролик, всегда безумно рад видеть Винни-Пуха …'
 }
 ];
