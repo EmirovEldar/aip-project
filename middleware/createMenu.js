@@ -1,4 +1,4 @@
-var Hero = require("./../models/Hero").Hero
+var Hero = require("../models/hero").Hero
 
 
 module.exports = function(req,res,next){
